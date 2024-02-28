@@ -25,6 +25,12 @@
   font-size: 1rem;
   color: white;
   border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  box-shadow: 2px 2px 5px;
+  border: 1px solid black;
 }
 
 /* variables  */
@@ -72,6 +78,7 @@ nav > h3 {
 .banner-camera {
   background-image: url("/images/Circle\ design.svg");
   background-repeat: no-repeat;
+  background-size: cover;
   max-width: 590px;
 }
 
@@ -103,6 +110,21 @@ nav > h3 {
 
 /* tablet screen  */
 
-@media only screen and (min-width : 576px) and (max-width:100px) {
-  
+@media only screen and (min-width : 576px) and (max-width:1000px) {
+  body {
+    text-align: center;
+    align-items: center;
+  }
+  nav, nav h3 {
+    flex-direction: column;
+    padding: 20px 5px;
+  }
+  .banner-container {
+    flex-direction: column-reverse;
+  }
+  .banner-camera {
+    margin: auto;
+    margin-top: -50px;
+    margin-bottom: 50px;
+  }
 }
