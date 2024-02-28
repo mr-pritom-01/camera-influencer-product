@@ -10,6 +10,9 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
 .paragraph {
   color: var(--primary-color);
   font-size: 1rem;
@@ -51,11 +54,10 @@ nav {
   align-items: center;
 }
 nav a {
-  text-decoration: none;
   color: var(--primary-color);
   padding-left: 35px;
 }
-nav a:hover{
+nav a:hover {
   color: var(--pink-color);
   text-decoration: underline;
 }
@@ -103,7 +105,8 @@ nav > h3 {
   padding: 20px 0;
   align-items: center;
 }
-.banner-sponsors-1, .banner-sponsors-2 {
+.banner-sponsors-1,
+.banner-sponsors-2 {
   display: flex;
   justify-content: space-around;
   width: 55%;
@@ -113,17 +116,64 @@ nav > h3 {
   width: 45%;
 }
 
-
+/* populer collection, card section starts here  */
+.populer-collection {
+  margin: 200px auto 0px;
+  text-align: center;
+}
+.populer-collection h2 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: fit-content;
+  padding: 50px 0;
+  margin: auto;
+  text-align: left;
+}
+.card {
+  width: 320px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+}
+.card > h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: 18px;
+}
+.card img {
+  width: 100%;
+}
+.card-price {
+  color: var(--Dark-Color, rgba(0, 0, 0, 0.87));
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.card-description {
+  max-width: 200px;
+  margin-top: 20px;
+}
+.card-button {
+  text-align: center;
+  margin-left: 920px;
+}
 
 /* meia queries for mobile displays */
 
-@media screen and (max-width : 576px) {
-
+@media screen and (max-width: 576px) {
   body {
     text-align: center;
     align-items: center;
   }
-  nav, nav h3, .banner-container {
+  nav,
+  nav h3,
+  .banner-container {
     flex-direction: column;
     padding: 30px 5px;
   }
@@ -146,16 +196,24 @@ nav > h3 {
     width: 60%;
     padding: 10px;
   }
+
+  .cards-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card-button {
+    margin-left: 200px;
+  }
 }
 
 /*  media queries for tablet screen  */
 
-@media only screen and (min-width : 576px) and (max-width:1000px) {
+@media only screen and (min-width: 576.1px) and (max-width: 1000px) {
   body {
     text-align: center;
     align-items: center;
   }
-  nav, nav h3 {
+  nav,
+  nav h3 {
     flex-direction: column;
     padding: 20px 5px;
   }
@@ -174,5 +232,13 @@ nav > h3 {
   .banner-sponsors img {
     width: 60%;
     padding: 10px;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .card-button {
+    margin-left: 500px;
   }
 }
