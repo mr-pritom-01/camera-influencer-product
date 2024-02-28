@@ -5,9 +5,9 @@
 * {
   font-family: "Poppins", sans-serif;
   font-style: normal;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 a {
@@ -141,6 +141,9 @@ nav > h3 {
   box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
   padding: 15px;
 }
+.card:hover {
+  box-shadow: 2px 2px 5px gray;
+}
 .card > h3 {
   font-size: 1.45rem;
   font-weight: 600;
@@ -168,15 +171,15 @@ nav > h3 {
 .featured-products {
   display: flex;
   justify-content: space-around;
-  border: 2px solid black;
   padding: 130px;
+  align-items: center;
 }
 .featured-products img {
   width: 100%;
 }
 .featured-products-text {
   max-width: 50%;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 .featured-products h1 {
   color: #0a0826;
@@ -190,6 +193,26 @@ nav > h3 {
 .featured-products button {
   border-radius: 5px;
 }
+
+
+/* footer section starts here  */
+footer {
+  background-color: #0A0826;
+  color: white;
+  text-align: center;
+}
+.footer-class, .footer-class p {
+  padding: 50px 0px;
+}
+.footer-icons a {
+  padding: 10px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+
+
+
 
 /* responsive media queries  */
 
@@ -252,13 +275,13 @@ nav > h3 {
   }
   nav,
   nav h3,
-  .banner-sponsors,
-  .featured-products
+  .banner-sponsors
   {
     flex-direction: column;
     padding: 20px 5px;
   }
-  .banner-container {
+  .banner-container,
+  .featured-products {
     flex-direction: column-reverse;
   }
   .banner-camera {
@@ -280,9 +303,12 @@ nav > h3 {
     margin-left: 500px;
   }
 
+  .featured-products img {
+    width: 100%;
+  }
   .featured-products-text {
-      padding: 10px;
-      max-width: 70%;
+      padding: 50px 0px;
+      max-width: 100%;
       margin: auto;
       text-align: left;
   }
