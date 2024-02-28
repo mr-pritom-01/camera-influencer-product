@@ -142,16 +142,16 @@ nav > h3 {
   padding: 15px;
 }
 .card > h3 {
-  font-size: 1.4rem;
-  font-weight: 500;
+  font-size: 1.45rem;
+  font-weight: 600;
   margin-top: 18px;
 }
 .card img {
   width: 100%;
 }
 .card-price {
-  color: var(--Dark-Color, rgba(0, 0, 0, 0.87));
-  font-size: 1.3rem;
+  color: var(--pink-color);
+  font-size: 1.4rem;
   font-weight: 400;
   margin-top: 10px;
 }
@@ -164,6 +164,35 @@ nav > h3 {
   margin-left: 920px;
 }
 
+/* feature product section starts here  */
+.featured-products {
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid black;
+  padding: 130px;
+}
+.featured-products img {
+  width: 100%;
+}
+.featured-products-text {
+  max-width: 50%;
+  margin-left: 20px;
+}
+.featured-products h1 {
+  color: #0a0826;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.featured-products p {
+  padding: 25px 0px;
+  max-width: 500px;
+}
+.featured-products button {
+  border-radius: 5px;
+}
+
+/* responsive media queries  */
+
 /* meia queries for mobile displays */
 
 @media screen and (max-width: 576px) {
@@ -173,7 +202,10 @@ nav > h3 {
   }
   nav,
   nav h3,
-  .banner-container {
+  .banner-container,
+  .banner-sponsors,
+  .featured-products
+  {
     flex-direction: column;
     padding: 30px 5px;
   }
@@ -188,20 +220,26 @@ nav > h3 {
     width: 90%;
     padding: 10px;
   }
-
-  .banner-sponsors {
-    flex-direction: column;
-  }
   .banner-sponsors img {
     width: 60%;
     padding: 10px;
   }
+
 
   .cards-container {
     grid-template-columns: repeat(1, 1fr);
   }
   .card-button {
     margin-left: 200px;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .featured-products-text {
+    padding: 10px;
+    max-width: 70%;
+    margin: auto;
+    text-align: left;
   }
 }
 
@@ -213,7 +251,10 @@ nav > h3 {
     align-items: center;
   }
   nav,
-  nav h3 {
+  nav h3,
+  .banner-sponsors,
+  .featured-products
+  {
     flex-direction: column;
     padding: 20px 5px;
   }
@@ -226,9 +267,6 @@ nav > h3 {
     margin-bottom: 50px;
   }
 
-  .banner-sponsors {
-    flex-direction: column;
-  }
   .banner-sponsors img {
     width: 60%;
     padding: 10px;
@@ -240,5 +278,12 @@ nav > h3 {
   }
   .card-button {
     margin-left: 500px;
+  }
+
+  .featured-products-text {
+      padding: 10px;
+      max-width: 70%;
+      margin: auto;
+      text-align: left;
   }
 }
