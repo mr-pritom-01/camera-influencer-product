@@ -19,23 +19,26 @@
 
 .btn-primary {
   border-radius: 40px;
-  background: #e02c6d;
+  background: var(--pink-color);
   padding: 10px 24px;
   gap: 8px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: white;
   border: none;
   cursor: pointer;
 }
 
 .btn-primary:hover {
-  box-shadow: 2px 2px 5px;
-  border: 1px solid black;
+  box-shadow: 2px 2px 5px gray;
+}
+img:hover {
+  cursor: pointer;
 }
 
 /* variables  */
 :root {
   --primary-color: #3a3a3a;
+  --pink-color: #e02c6d;
 }
 
 /* header section styles starts here  */
@@ -51,6 +54,10 @@ nav a {
   text-decoration: none;
   color: var(--primary-color);
   padding-left: 35px;
+}
+nav a:hover{
+  color: var(--pink-color);
+  text-decoration: underline;
 }
 nav > h3 {
   color: var(--primary-color);
@@ -83,9 +90,12 @@ nav > h3 {
   background-size: cover;
   max-width: 590px;
 }
+.banner-img {
+  width: 100%;
+}
 
 .banner-sponsors {
-  border: 1px solid black;
+  border: 1px solid var(--primary-color);
   display: flex;
   justify-content: space-around;
   max-width: 78%;
@@ -105,7 +115,7 @@ nav > h3 {
 
 
 
-/* mobile displays */
+/* meia queries for mobile displays */
 
 @media screen and (max-width : 576px) {
 
@@ -124,9 +134,9 @@ nav > h3 {
   .banner-text {
     margin-bottom: 30px;
   }
-  .banner-camera {
-    width: 85%;
-    margin: auto;
+  .banner-img {
+    width: 90%;
+    padding: 10px;
   }
 
   .banner-sponsors {
@@ -138,7 +148,7 @@ nav > h3 {
   }
 }
 
-/* tablet screen  */
+/*  media queries for tablet screen  */
 
 @media only screen and (min-width : 576px) and (max-width:1000px) {
   body {
